@@ -24,7 +24,6 @@ class VidmarmercadoCrew():
 		return Agent(
 			config=self.agents_config['customer_analysis_agent'],
 			tools=[search_tool, scrape_tool],
-			memory=True,
 			verbose=True,
 			llm=MyLLM.gpt4o_mini_2024_07_18
 		)
@@ -34,7 +33,6 @@ class VidmarmercadoCrew():
 		return Agent(
 			config=self.agents_config['market_trends_agent'],
 			tools=[search_tool, scrape_tool, scrape_element_tool],
-			memory=True,
 			allow_delegation=True,
 			verbose=True,
 			allow_interruption=True,  # Permite interrupções para reagir rapidamente a mudanças nos produtos dos concorrentes
@@ -47,7 +45,6 @@ class VidmarmercadoCrew():
 		return Agent(
 			config=self.agents_config['product_analysis_agent'],
 			tools=[search_tool, scrape_tool, scrape_element_tool],
-			memory=True,
 			allow_delegation=True,
 			verbose=True,
 			allow_interruption=True,  # Permite interrupções para reagir rapidamente a mudanças nos produtos dos concorrentes

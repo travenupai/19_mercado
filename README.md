@@ -120,7 +120,7 @@ streamlit run app2.py    #arquivo docx
    numpy
    ```
 2. No site do [Streamlit](https://share.streamlit.io/), faça login.
-3. Clique em **New App** para iniciar o processo de deploy.
+3. Clique em **New App** para iniciar o processo de "deploy a public app from Github".
 4. No campo **Repository**, insira a URL do seu repositório GitHub, por exemplo:
    ```plaintext
    https://github.com/seu-usuario/nome-repositorio
