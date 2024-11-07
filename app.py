@@ -1,3 +1,11 @@
+try:
+    import pysqlite3
+    import sys
+    sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+except ImportError:
+    print("pysqlite3 não está instalado. Verifique se ele está no requirements.txt")
+
+
 import sqlite3
 import sys
 import os
