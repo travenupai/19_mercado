@@ -28,7 +28,6 @@ class VidmarmercadoCrew():
 			allow_delegation=True,
 			allow_interruption=True,  # Permite interrupções para reagir rapidamente a mudanças nos produtos dos concorrentes
 			allow_fallback=True,      # Permite fallback caso precise de um especialista em tecnologia ou satisfação do cliente
-			memory=True,
 			llm=MyLLM.gpt4o_mini_2024_07_18
 		)
 
@@ -41,7 +40,6 @@ class VidmarmercadoCrew():
 			verbose=True,
 			allow_interruption=True,  # Permite interrupções para reagir rapidamente a mudanças nos produtos dos concorrentes
             allow_fallback=True,      # Permite fallback caso precise de um especialista em tecnologia ou satisfação do cliente
-			memory=True,
 			llm=MyLLM.gpt4o_mini_2024_07_18
 		)
 
@@ -54,7 +52,6 @@ class VidmarmercadoCrew():
 			verbose=True,
 			allow_interruption=True,  # Permite interrupções para reagir rapidamente a mudanças nos produtos dos concorrentes
             allow_fallback=True,      # Permite fallback caso precise de um especialista em tecnologia ou satisfação do cliente
-			memory=True,
 			llm=MyLLM.gpt4o_mini_2024_07_18
 		)
 

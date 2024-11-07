@@ -11,6 +11,5 @@ python-docx==0.8.11              # Geração de arquivos Word
 Pillow==10.0.0                   # Imagens, dependência indireta de fpdf2
 fonttools==4.54.1                # Fontes, dependência indireta de fpdf2
 defusedxml==0.7.1                # Segurança para manipulação de XML, dependência de fpdf2
-chromadb>=0.3.0  # Check for the latest compatible version if needed
 
 
