@@ -1,3 +1,9 @@
+import sys
+import os
+# Configuração do diretório src para importações
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
+
+
 try:
     __import__("pysqlite3")
     import sys
@@ -7,16 +13,14 @@ except ImportError:
 
 
 import sqlite3
-import sys
-import os
 import streamlit as st
 from src.vidmarmercado.crew import VidmarmercadoCrew
 from io import BytesIO
 from zipfile import ZipFile
 from docx import Document
 
-# Configuração do diretório src para importações
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
+
+
 
 # Configuração do título da aplicação
 st.title('Análise de Pesquisa de Mercado com AI Agents - CrewAI')
