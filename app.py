@@ -1,26 +1,18 @@
 import sys
 import os
-# Configuração do diretório src para importações
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
-
-
-try:
-    __import__("pysqlite3")
-    import sys
-    sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
-except ImportError:
-    print("pysqlite3-binary não está instalado corretamente. Verifique o requirements.txt")
-
-
-import sqlite3
 import streamlit as st
-from src.vidmarmercado.crew import VidmarmercadoCrew
 from io import BytesIO
 from zipfile import ZipFile
 from docx import Document
 
+# Configuração do diretório src para importações
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
 
-
+# Importação do módulo VidmarmercadoCrew
+try:
+    from vidmarmercado.crew import VidmarmercadoCrew
+except ModuleNotFoundError:
+    st.error("Não foi possível importar o módulo VidmarmercadoCrew. Verifique se o caminho está correto e se o módulo existe.")
 
 # Configuração do título da aplicação
 st.title('Análise de Pesquisa de Mercado com AI Agents - CrewAI')
@@ -64,17 +56,20 @@ def criar_zip(arquivos_md):
 if st.button("Executar Análise"):
     # Exibe um spinner enquanto o pipeline está em execução
     with st.spinner("Analisando... por favor, aguarde."):
-        # Executa o pipeline com a URL fornecida
-        crew_instance = VidmarmercadoCrew().crew()  # Cria uma instância da Crew
-        result = crew_instance.kickoff(inputs={'site_url': site_url})  # Usa kickoff para iniciar a execução
-        
-        # Verifica se o pipeline retornou algum resultado
-        if result:
-            st.write("Análise concluída! Aqui estão os arquivos de saída:")
+        if 'VidmarmercadoCrew' in globals():
+            # Executa o pipeline com a URL fornecida
+            crew_instance = VidmarmercadoCrew().crew()  # Cria uma instância da Crew
+            result = crew_instance.kickoff(inputs={'site_url': site_url})  # Usa kickoff para iniciar a execução
             
-            # Atualize o session_state com os resultados
-            st.session_state.analise_realizada = True
-            st.session_state.arquivos_md = ["customer_feedback_analysis.md", "market_trends_monitoring.md", "product_comparison.md"]
+            # Verifica se o pipeline retornou algum resultado
+            if result:
+                st.write("Análise concluída! Aqui estão os arquivos de saída:")
+                
+                # Atualize o session_state com os resultados
+                st.session_state.analise_realizada = True
+                st.session_state.arquivos_md = ["customer_feedback_analysis.md", "market_trends_monitoring.md", "product_comparison.md"]
+        else:
+            st.error("A análise não pôde ser executada devido a problemas na importação do módulo VidmarmercadoCrew.")
 
 # Exibir botão para baixar todos os arquivos em um único arquivo ZIP após a análise ser realizada
 if st.session_state.analise_realizada:
