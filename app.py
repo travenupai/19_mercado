@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "src"
 
 # Importação do módulo VidmarmercadoCrew
 try:
-    from vidmarmercado.crew import VidmarmercadoCrew
+    from src.vidmarmercado.crew import VidmarmercadoCrew
 except ModuleNotFoundError:
     st.error("Não foi possível importar o módulo VidmarmercadoCrew. Verifique se o caminho está correto e se o módulo existe.")
 
