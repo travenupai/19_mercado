@@ -1,3 +1,10 @@
 .env
 __pycache__/
 .venv
+/.venv/
+uv.lock
+customer_feedback_analysis.md
+
+market_trends_monitoring.md
+product_comparison.md
+packages.txt

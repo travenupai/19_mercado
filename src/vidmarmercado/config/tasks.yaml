@@ -1,84 +1,55 @@
 customer_feedback_analysis:
   description: >
-    Coletar e analisar feedbacks de consumidores sobre os produtos e serviços da empresa
-    do site {site_url} visando uma compreensão aprofundada das percepções e expectativas dos clientes.
-    Use plataformas de avaliação online, como Google Reviews e Reclame aqui, além de redes
-    sociais como facebook, twitter , instagram e linkedin, e de fóruns especializados, para identificar as reclamações mais comuns,
-    sugestões e preferências expressas pelos consumidores. Além disso, analise dados
-    internos de atendimento ao cliente, incluindo registros de chamadas, e-mails e
-    chats, para detectar padrões recorrentes que podem indicar áreas de melhoria.
-    Identifique os principais pontos de dor e as expectativas dos clientes, considerando
-    aspectos como qualidade, usabilidade, atendimento e suporte. Avalie também como
-    os clientes percebem os produtos em comparação com as ofertas dos concorrentes.
-    O objetivo desta tarefa é fornecer insights estratégicos que orientem melhorias
-    no desenvolvimento de produtos e ajustes em serviços, com base em uma compreensão
-    clara das demandas e necessidades do público-alvo.
+    Esta tarefa foca na coleta e análise de feedbacks de consumidores sobre os produtos e serviços da empresa no site {site_url}. 
+    O objetivo é obter uma compreensão profunda das percepções, expectativas e pontos de dor dos clientes em relação aos produtos oferecidos pela empresa. 
+    Para uma análise completa, o agente deve coletar feedbacks de diversas fontes, incluindo plataformas de avaliação como Google Reviews e Reclame Aqui, além de redes sociais populares (Facebook, Twitter, Instagram e LinkedIn). 
+    Além de fontes externas, é essencial explorar dados internos de atendimento ao cliente, como registros de chamadas, e-mails e chats, para identificar padrões que possam indicar áreas específicas de melhoria. 
+    Essa análise deve abordar aspectos como a qualidade dos produtos, usabilidade, atendimento e suporte, comparando as opiniões e experiências dos clientes com a percepção dos concorrentes. 
+    O agente deve buscar entender as reclamações mais comuns, as sugestões de melhoria e os pontos fortes apontados pelos clientes, oferecendo insights valiosos que possam orientar o desenvolvimento de produtos e ajustes de serviço.
+
   expected_output: >
-    Um relatório detalhado com, no mínimo, 1200 palavras, que resuma as principais
-    preferências dos clientes, pontos de dor mais citados e sugestões relevantes
-    para aprimoramento. O relatório deve incluir exemplos específicos de feedbacks,
-    destacando comentários que demonstrem padrões importantes, como reclamações
-    frequentes ou elogios recorrentes. Além disso, inclua uma análise qualitativa
-    das expectativas dos consumidores e uma seção com recomendações práticas para
-    que a empresa do site {site_url} possa atender melhor as necessidades dos clientes. O relatório
-    deve estar estruturado para facilitar a identificação de oportunidades de
-    melhoria e conter sugestões de implementação imediata e a longo prazo,
-    baseadas nas percepções dos clientes.
-    A saída deve ser em Markdown. É muito importante que o texto não contenha coisas 
-    como "‘‘‘ markdown " e "'''". """ ,
+    O agente deve entregar um relatório detalhado com, no mínimo, 2000 palavras. O relatório deve incluir uma visão geral das preferências e expectativas dos clientes, apresentando os pontos de dor mais frequentes e as sugestões mais comuns.
+    Além disso, o relatório deve conter exemplos específicos de feedbacks coletados, destacando comentários que ilustrem padrões importantes, como reclamações recorrentes ou elogios específicos. 
+    O relatório deve ser estruturado para permitir que os leitores identifiquem facilmente as oportunidades de melhoria, com seções dedicadas a sugestões práticas de curto e longo prazo para melhor alinhamento com as necessidades dos clientes.
+    A saída deve ser formatada em Markdown e evitar o uso de delimitadores como "``` markdown ```" para garantir uma apresentação limpa.
+  
   agent: customer_analysis_agent
+
+
 
 market_trends_monitoring:
   description: >
-    Monitorar publicações, blogs especializados, e relatórios de mercado para captar
-    tendências emergentes e identificar tecnologias e práticas inovadoras que possam
-    impactar o setor da empresa do site {site_url}. Analise relatórios de consultorias, como McKinsey e
-    Gartner, além de artigos e seções de economia de grandes portais de notícias, para
-    observar mudanças no comportamento do consumidor e no ambiente regulatório.
-    Além disso, examine tendências econômicas, como variações na taxa de juros e
-    inflação, e como esses fatores podem afetar a demanda e o comportamento dos
-    consumidores. Identifique também inovações tecnológicas e práticas sustentáveis
-    que estejam ganhando popularidade, avaliando seu potencial impacto para a empresa.
-    O objetivo é manter a empresa atualizada sobre mudanças iminentes e fornecer
-    insights para que a empresa ajuste suas estratégias, garantindo uma vantagem
-    competitiva e resiliência no mercado.
+    A tarefa de monitoramento de tendências de mercado visa acompanhar e analisar as mudanças emergentes no setor da empresa {site_url}, 
+    com foco em identificar tecnologias inovadoras, práticas sustentáveis e mudanças regulatórias que possam impactar o ambiente de negócios. 
+    O agente deve monitorar fontes variadas, incluindo relatórios de consultorias de renome, como McKinsey e Gartner, bem como blogs especializados e seções de economia de portais de notícias importantes. 
+    Esta análise deve cobrir uma ampla gama de tendências econômicas, como oscilações nas taxas de juros, inflação e mudanças no comportamento do consumidor, que podem influenciar diretamente a demanda e a forma como os consumidores interagem com os produtos da empresa.
+    Ao entender as inovações tecnológicas e as práticas sustentáveis em ascensão, o agente deve avaliar o impacto dessas tendências no setor e identificar as oportunidades e ameaças que elas representam para a empresa. 
+    O objetivo é permitir que a empresa se antecipe às transformações do mercado, ajustando suas estratégias para garantir resiliência e vantagem competitiva.
+
   expected_output: >
-    Um relatório de, no mínimo, 1200 palavras, destacando as tendências mais relevantes
-    para o setor que atua a empresa do site {site_url}, incluindo uma análise de oportunidades e ameaças potenciais. O
-    relatório deve incluir uma síntese das tendências observadas, segmentadas por
-    categorias, como “inovações tecnológicas”, “mudanças regulatórias”, e “fatores
-    econômicos”. Além disso, ofereça recomendações sobre como a empresa pode se
-    adaptar para tirar proveito dessas tendências, incluindo sugestões de novas
-    tecnologias a serem adotadas e práticas a serem implementadas para aumentar a
-    competitividade e sustentabilidade. Este relatório deve ajudar a empresa a
-    entender o contexto atual e a se preparar para as transformações do mercado
-    nos próximos anos.
-    A saída deve ser em Markdown. É muito importante que o texto não contenha coisas 
-    como "‘‘‘ markdown " e "'''". """ ,
+    Um relatório de no mínimo 2000 palavras deve ser entregue, destacando as tendências mais relevantes para o setor de atuação da empresa no site {site_url}. 
+    Este relatório deve incluir uma análise das principais oportunidades e ameaças, com uma síntese das tendências observadas, organizadas por categorias, como "Inovações Tecnológicas", "Mudanças Regulatórias" e "Fatores Econômicos". 
+    Além disso, o relatório deve fornecer recomendações detalhadas sobre como a empresa pode adaptar suas operações para aproveitar essas tendências, incluindo sugestões de novas tecnologias e práticas para aumentar a competitividade e a sustentabilidade. 
+    A saída deve ser formatada em Markdown, sem delimitadores como "``` markdown ```", proporcionando uma apresentação limpa e direta.
+
   agent: market_trends_agent
+
+
 
 product_comparison:
   description: >
-    Avaliar e comparar as funcionalidades e especificações dos produtos da empresa do site {site_url}
-    com os dos principais concorrentes no mercado. Realize uma análise detalhada
-    das características técnicas, usabilidade, preço, e feedback dos consumidores
-    sobre os produtos rivais para entender o que os diferencia. Identifique
-    funcionalidades que são altamente valorizadas pelos consumidores e que
-    representam uma vantagem competitiva dos concorrentes. Além disso, colete
-    informações de avaliações online e de fóruns especializados para entender
-    os pontos fortes e fracos dos produtos concorrentes na perspectiva dos
-    consumidores. O objetivo desta tarefa é identificar áreas específicas de
-    melhoria e inovação para os produtos da empresa, criando oportunidades para
-    diferenciar-se no mercado e atender melhor as expectativas dos consumidores.
+    A tarefa de comparação de produtos tem como objetivo avaliar os produtos da empresa {site_url} em relação aos principais concorrentes no mercado. 
+    O agente deve realizar uma análise detalhada das características técnicas, funcionalidades, usabilidade, preço e feedback dos consumidores sobre produtos rivais, para identificar as diferenças que tornam esses produtos atraentes para os consumidores.
+    Essa análise envolve a coleta de informações de plataformas de avaliação e fóruns especializados, onde os consumidores expressam suas percepções sobre os produtos. 
+    Ao identificar funcionalidades específicas que são altamente valorizadas e que representam uma vantagem competitiva para os concorrentes, o agente pode auxiliar a empresa a detectar áreas de melhoria e inovação. 
+    A intenção é que esta comparação forneça um entendimento profundo dos pontos fortes e fracos dos produtos da empresa, permitindo que sejam feitos ajustes estratégicos para diferenciar a empresa no mercado e atender melhor às expectativas dos consumidores.
+
   expected_output: >
-    Um relatório com no mínimo 1200 palavras, que ofereça uma comparação detalhada
-    entre os produtos da empresa e os dos concorrentes. Inclua seções como
-    “Principais Diferenciais”, “Pontos Fortes e Fracos dos Concorrentes”, e
-    “Oportunidades de Inovação”, com exemplos concretos de funcionalidades
-    ou características que representam uma vantagem no mercado. O relatório
-    deve conter recomendações de melhorias e inovações para que a empresa
-    possa superar ou igualar os concorrentes em aspectos críticos, como
-    qualidade, usabilidade e valor agregado. O objetivo final é fornecer uma
-    análise que ajude a empresa do site {site_url} a se destacar, aprimorando seus produtos com
-    base em insights competitivos e tendências do setor. 
+    Um relatório detalhado com no mínimo 2000 palavras, que forneça uma comparação abrangente entre os produtos da empresa e os de seus principais concorrentes. 
+    O relatório deve incluir seções dedicadas a "Principais Diferenciais", "Pontos Fortes e Fracos dos Concorrentes" e "Oportunidades de Inovação", com exemplos concretos de funcionalidades ou características que destacam os concorrentes. 
+    A análise deve culminar em recomendações estratégicas para melhorias e inovações, com o objetivo de superar ou igualar os concorrentes em aspectos críticos, como qualidade, usabilidade e valor agregado. 
+    A saída deve ser em Markdown, sem delimitadores como "``` markdown ```", garantindo uma apresentação profissional e fácil de ler para os tomadores de decisão.
+
   agent: product_analysis_agent
+
+

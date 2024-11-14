@@ -1,18 +1,12 @@
-import sys
+# app.py
+
 import os
+from src.vidmarmercado.crew import VidmarmercadoCrew
 import streamlit as st
 from io import BytesIO
 from zipfile import ZipFile
 from docx import Document
 
-# Configuração do diretório src para importações
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
-
-# Importação do módulo VidmarmercadoCrew
-try:
-    from src.vidmarmercado.crew import VidmarmercadoCrew
-except ModuleNotFoundError:
-    st.error("Não foi possível importar o módulo VidmarmercadoCrew. Verifique se o caminho está correto e se o módulo existe.")
 
 # Configuração do título da aplicação
 st.title('Análise de Pesquisa de Mercado com AI Agents - CrewAI')
