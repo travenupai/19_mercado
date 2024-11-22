@@ -14,3 +14,4 @@ langchain-openai
 # fonttools==4.54.1                # Fontes, dependência indireta de fpdf2
 # defusedxml==0.7.1                # Segurança para manipulação de XML, dependência de fpdf2
 
+
