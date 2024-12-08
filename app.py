@@ -1,6 +1,9 @@
 # app.py
 
 import os
+import sys
+__import__('pysqlite3')
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 from src.vidmarmercado.crew import VidmarmercadoCrew
 import streamlit as st
 from io import BytesIO

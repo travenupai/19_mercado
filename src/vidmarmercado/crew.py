@@ -5,7 +5,7 @@ import openai
 from dotenv import load_dotenv
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-from crewai_tools import SerperDevTool, ScrapeElementFromWebsiteTool, ScrapeWebsiteTool 
+from crewai_tools import SerperDevTool, ScrapeWebsiteTool 
 from langchain_openai import ChatOpenAI
 
 # Load environment variables
@@ -24,7 +24,6 @@ llm = ChatOpenAI(model_name="gpt-4o-mini", openai_api_key=api_key)
 # Initialize tools
 search_tool = SerperDevTool()
 scrape_tool = ScrapeWebsiteTool()
-scrape_element_tool = ScrapeElementFromWebsiteTool()
 
 @CrewBase
 class VidmarmercadoCrew():
@@ -47,7 +46,7 @@ class VidmarmercadoCrew():
 	def market_trends_agent(self) -> Agent:
 		return Agent(
 			config=self.agents_config['market_trends_agent'],
-			tools=[search_tool, scrape_tool, scrape_element_tool],
+			tools=[search_tool, scrape_tool],
 			allow_delegation=True,
 			verbose=True,
 			allow_interruption=True,  # Permite interrupções para reagir rapidamente a mudanças nos produtos dos concorrentes
@@ -60,7 +59,7 @@ class VidmarmercadoCrew():
 	def product_analysis_agent(self) -> Agent:
 		return Agent(
 			config=self.agents_config['product_analysis_agent'],
-			tools=[search_tool, scrape_tool, scrape_element_tool],
+			tools=[search_tool, scrape_tool],
 			allow_delegation=True,
 			verbose=True,
 			allow_interruption=True,  # Permite interrupções para reagir rapidamente a mudanças nos produtos dos concorrentes
